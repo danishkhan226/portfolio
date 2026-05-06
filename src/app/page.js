@@ -3,6 +3,8 @@
 import { motion, useScroll, useSpring } from 'framer-motion';
 import PageFooter from '@/components/PageFooter';
 import VelocityText from '@/components/animations/VelocityText';
+import HeroTransition from '@/components/animations/HeroTransition';
+
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import ClientsTicker from '@/components/ClientsTicker';
@@ -42,6 +44,8 @@ export default function Home() {
         }}
       />
       
+
+      <HeroTransition />
       <Hero />
 
       <div style={{ padding: '4rem 0', background: 'rgba(255,255,255,0.01)', borderY: '1px solid var(--glass-border)' }}>

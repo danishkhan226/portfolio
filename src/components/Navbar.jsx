@@ -80,9 +80,9 @@ export default function Navbar() {
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 1.5 }}
     >
       <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
-        <a href="#home" className="logo" onClick={(e) => {
+        <a href="#top" className="logo" onClick={(e) => {
           e.preventDefault();
-          document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
           setIsMenuOpen(false);
         }}>
           <motion.span 
@@ -116,7 +116,11 @@ export default function Navbar() {
               href={link.href}
               onClick={(e) => {
                 e.preventDefault();
-                document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                if (link.href === '#home') {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else {
+                  document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                }
                 setIsMenuOpen(false);
               }}
               className={`nav-link ${activeSection === link.href.slice(1) ? 'active' : ''}`}

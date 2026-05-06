@@ -1,5 +1,5 @@
 :root {
-  --background: #fdf8e7; /* Light comic paper color */
+  --background: #ededed; /* Uniform cinematic grey */
   --foreground: #09090b; /* Thick black ink */
   --primary: #fde047; /* Vibrant Yellow */
   --primary-glow: rgba(253, 224, 71, 0.4);
@@ -74,6 +74,26 @@ h1, h2, h3, h4 {
   color: var(--foreground);
   text-shadow: 4px 4px 0px var(--primary), 8px 8px 0px #000;
   -webkit-text-stroke: 2px #000;
+  word-break: break-word;
+}
+
+.hero-headline {
+  font-size: clamp(3rem, 11vw, 8.5rem);
+  margin-bottom: 2rem;
+  line-height: 1;
+  font-weight: 900;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .hero-headline {
+    font-size: clamp(2.5rem, 15vw, 4.5rem);
+    line-height: 1.1;
+  }
 }
 
 .text-balance {

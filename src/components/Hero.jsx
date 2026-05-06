@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import Magnetic from './animations/Magnetic';
+import SplitText from './animations/SplitText';
 
 export default function Hero() {
   return (
@@ -27,8 +28,46 @@ export default function Hero() {
             >
               PRODUCT DESIGNER & FULL STACK ENGINEER
             </motion.span>
-            <h1 className="text-gradient" style={{ fontSize: 'clamp(4rem, 12vw, 8.5rem)', marginBottom: '2rem', lineHeight: 0.85, fontWeight: 800 }}>
-              Crafting Digital <br /> Excellence.
+            <h1 className="hero-headline">
+              <div style={{ overflow: 'hidden', display: 'block' }}>
+                <SplitText 
+                  text="Crafting Digital" 
+                  delay={1.2}
+                  style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', letterSpacing: '0.1em' }}
+                />
+              </div>
+              <div style={{ position: 'relative', display: 'block', width: '100%' }}>
+                <motion.div
+                  whileHover="hover"
+                  style={{ cursor: 'none', display: 'flex', justifyContent: 'center' }}
+                >
+                  <SplitText 
+                    text="Excellence." 
+                    delay={1.6}
+                    className="text-gradient"
+                    style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', paddingBottom: '0.15em', letterSpacing: '0.1em' }}
+                  />
+                </motion.div>
+                
+                {/* Dynamic Highlight Line */}
+                <motion.div
+                  initial={{ scaleX: 0, originX: 0 }}
+                  animate={{ scaleX: 1 }}
+                  transition={{ duration: 1.2, ease: "circOut", delay: 2.5 }}
+                  style={{
+                    position: 'absolute',
+                    bottom: '15%',
+                    left: '0',
+                    width: '100%',
+                    height: 'clamp(6px, 2vw, 15px)',
+                    background: 'var(--primary)',
+                    zIndex: -1,
+                    opacity: 0.8,
+                    borderRadius: '4px',
+                    boxShadow: '0 10px 20px rgba(0,0,0,0.1)'
+                  }}
+                />
+              </div>
             </h1>
           </motion.div>
           
@@ -69,6 +108,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
+        className="mobile-hide"
         style={{ 
           position: 'absolute', 
           bottom: '2rem', 
