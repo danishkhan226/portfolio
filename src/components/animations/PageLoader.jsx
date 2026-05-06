@@ -50,7 +50,7 @@ export default function PageLoader() {
             margin: 0
           }}
         >
-          DANIEL.DEV
+          DANISH.DEV
         </motion.h1>
       </div>
       <motion.div

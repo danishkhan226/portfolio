@@ -8,19 +8,19 @@ const testimonials = [
   {
     name: 'Sarah Jenkins',
     role: 'CEO at InnovateX',
-    content: 'Daniel is a rare talent who combines technical mastery with an incredible eye for design. Our platform is light years ahead of the competition thanks to him.',
+    content: 'Danish is a rare talent who combines technical mastery with an incredible eye for design. Our platform is light years ahead of the competition thanks to him.',
     avatar: 'https://i.pravatar.cc/150?u=sarah'
   },
   {
     name: 'Michael Chen',
     role: 'Product Lead at FlowState',
-    content: 'The level of detail and polish Daniel brings to every project is unmatched. He doesn&apos;t just build features; he builds experiences that users love.',
+    content: 'The level of detail and polish Danish brings to every project is unmatched. He doesn&apos;t just build features; he builds experiences that users love.',
     avatar: 'https://i.pravatar.cc/150?u=michael'
   },
   {
     name: 'Elena Rodriguez',
     role: 'Creative Director',
-    content: 'Working with Daniel was a breeze. He took our complex vision and turned it into a seamless, high-performance reality. Truly exceptional.',
+    content: 'Working with Danish was a breeze. He took our complex vision and turned it into a seamless, high-performance reality. Truly exceptional.',
     avatar: 'https://i.pravatar.cc/150?u=elena'
   }
 ];

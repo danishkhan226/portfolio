@@ -19,7 +19,7 @@ const outfit = Outfit({
 });
 
 export const metadata = {
-  title: 'Daniel | Product Designer & Developer',
+  title: 'Danish Khan | Product Designer & Developer',
   description: 'A professional portfolio showcasing digital experiences and engineering excellence.',
 };
 

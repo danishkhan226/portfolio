@@ -35,7 +35,7 @@ export default function PageFooter({ nextText, nextHref }) {
       </div>
       
       <p style={{ marginTop: '4rem', color: 'var(--foreground)', fontSize: '0.9rem', fontWeight: 600 }}>
-        © 2024 Daniel. Crafted with passion.
+        © 2024 Danish Khan. Crafted with passion.
       </p>
     </section>
   );

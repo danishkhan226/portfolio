@@ -64,7 +64,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p style={{ color: 'var(--foreground)', fontSize: '0.9rem', fontWeight: 900, textTransform: 'uppercase' }}>Email</p>
-                    <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>hello@daniel.dev</p>
+                    <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>hello@danish.dev</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>

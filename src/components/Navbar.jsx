@@ -89,7 +89,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.05 }}
             style={{ fontWeight: 900, fontSize: '1.5rem', letterSpacing: '-0.05em', cursor: 'pointer', display: 'flex', alignItems: 'center' }}
           >
-            DANIEL<span style={{ color: '#fff', textShadow: '2px 2px 0px #000' }}>.</span>
+            DANISH<span style={{ color: '#fff', textShadow: '2px 2px 0px #000' }}>.</span>
           </motion.span>
         </a>
 

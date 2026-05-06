@@ -26,7 +26,7 @@ export default function About() {
                 <div className="card" style={{ padding: 0, borderRadius: '32px', overflow: 'hidden', aspectRatio: '4/5' }}>
                   <ImageReveal 
                     src="/profile_main.png" 
-                    alt="Daniel - Full Stack Engineer" 
+                    alt="Danish Khan - Full Stack Engineer" 
                     style={{ width: '100%', height: '100%' }}
                   />
                 </div>
@@ -72,7 +72,7 @@ export default function About() {
               </TextReveal>
               <div style={{ color: 'var(--foreground)', fontSize: '1.2rem', gap: '1.5rem', display: 'flex', flexDirection: 'column', fontWeight: 600 }}>
                 <p>
-                  I&apos;m Daniel, a multidisciplinary product designer and developer based in San Francisco. I specialize in building digital products that bridge the gap between aesthetics and functionality.
+                  I&apos;m Danish Khan, a multidisciplinary product designer and developer based in San Francisco. I specialize in building digital products that bridge the gap between aesthetics and functionality.
                 </p>
                 <p>
                   My approach is rooted in bold design principles and clean, maintainable code. I believe that the best products are those that feel alive and indispensable.
