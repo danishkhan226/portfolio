@@ -1,66 +1,82 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+'use client';
+
+import { motion, useScroll, useSpring } from 'framer-motion';
+import PageFooter from '@/components/PageFooter';
+import VelocityText from '@/components/animations/VelocityText';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import ClientsTicker from '@/components/ClientsTicker';
+import Expertise from '@/components/Expertise';
+import Experience from '@/components/Experience';
+import Workflow from '@/components/Workflow';
+import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio';
+import Testimonials from '@/components/Testimonials';
+import FAQ from '@/components/FAQ';
+import FinalCTA from '@/components/FinalCTA';
+import Contact from '@/components/Contact';
 
 export default function Home() {
+  const { scrollYProgress: pageScrollY } = useScroll();
+  const scaleX = useSpring(pageScrollY, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main className="snap-container">
+      {/* Progress Bar */}
+      <motion.div
+        style={{
+          scaleX,
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          height: '4px',
+          background: 'var(--primary)',
+          transformOrigin: '0%',
+          zIndex: 2000,
+          boxShadow: '0 0 15px var(--primary-glow)'
+        }}
+      />
+      
+      <Hero />
+
+      <div style={{ padding: '4rem 0', background: 'rgba(255,255,255,0.01)', borderY: '1px solid var(--glass-border)' }}>
+        <VelocityText baseVelocity={-2}>DESIGN • DEVELOPMENT • INNOVATION • STRATEGY • </VelocityText>
+      </div>
+
+      <About />
+
+      <ClientsTicker />
+
+      <Expertise />
+
+      <Experience />
+
+      <Workflow />
+
+      <Services />
+
+      <div style={{ padding: '8rem 0', background: 'rgba(255,255,255,0.01)', borderY: '1px solid var(--glass-border)', overflow: 'hidden' }}>
+        <VelocityText baseVelocity={3}>DIGITAL ARCHITECT • CREATIVE CODER • PRODUCT DESIGNER • FULL STACK ENGINEER • </VelocityText>
+        <div style={{ height: '2rem' }} />
+        <VelocityText baseVelocity={-3}>MODERN SOLUTIONS • PERFORMANCE OPTIMIZED • SCALABLE ARCHITECTURE • USER CENTRIC • </VelocityText>
+      </div>
+
+      <Portfolio />
+
+      <Testimonials />
+
+      <FAQ />
+
+      <FinalCTA />
+
+      <Contact />
+
+      <PageFooter nextText="Home" nextHref="#home" />
+    </main>
   );
 }
