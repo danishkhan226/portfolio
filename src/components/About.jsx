@@ -33,12 +33,13 @@ export default function About() {
               </PerspectiveCard>
                 <div style={{ 
                 position: 'absolute', 
-                bottom: '-20px', 
-                right: '-20px', 
+                bottom: 'clamp(-10px, -2vw, -20px)', 
+                right: 'clamp(-10px, -2vw, -20px)', 
                 background: 'var(--primary)', 
-                padding: '2rem', 
+                padding: 'clamp(1rem, 3vw, 2rem)', 
                 border: '4px solid var(--border)',
-                boxShadow: '8px 8px 0px var(--border)'
+                boxShadow: '8px 8px 0px var(--border)',
+                zIndex: 2
               }}>
                 <Terminal color="var(--border)" size={32} />
               </div>
@@ -53,7 +54,7 @@ export default function About() {
                   color: 'var(--primary)', 
                   fontWeight: 900, 
                   letterSpacing: '0.1em', 
-                  fontSize: '0.9rem', 
+                  fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', 
                   display: 'inline-block', 
                   marginBottom: '1.5rem',
                   border: '4px solid var(--border)',
@@ -66,7 +67,7 @@ export default function About() {
                 BIOGRAPHY
               </motion.span>
               <TextReveal>
-                <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--primary)' }}>
+                <h2 style={{ fontSize: 'clamp(2.2rem, 8vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--primary)', lineHeight: 1.1 }}>
                   I craft digital experiences with precision.
                 </h2>
               </TextReveal>

@@ -379,6 +379,17 @@ button:disabled {
   .timeline-dot {
     display: none !important;
   }
+
+  .sticky-column {
+    position: relative !important;
+    top: 0 !important;
+    margin-bottom: 3rem;
+  }
+}
+
+.sticky-column {
+  position: sticky;
+  top: 150px;
 }
 
 .grid-2 {

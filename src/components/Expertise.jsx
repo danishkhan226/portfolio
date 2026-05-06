@@ -21,7 +21,7 @@ export default function Expertise() {
           <div className="grid-2 mobile-column">
             <div>
               <TextReveal>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--accent)' }}>Core Expertise</h2>
+                <h2 style={{ fontSize: 'clamp(2rem, 8vw, 2.5rem)', marginBottom: '3rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--accent)' }}>Core Expertise</h2>
               </TextReveal>
               <div style={{ display: 'grid', gap: '2rem' }}>
                 {[
@@ -49,7 +49,7 @@ export default function Expertise() {
 
             <div>
               <TextReveal>
-                <h2 style={{ fontSize: '2.5rem', marginBottom: '3rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--primary)' }}>Technical Skills</h2>
+                <h2 style={{ fontSize: 'clamp(2rem, 8vw, 2.5rem)', marginBottom: '3rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--primary)' }}>Technical Skills</h2>
               </TextReveal>
               <motion.div 
                 initial="hidden"

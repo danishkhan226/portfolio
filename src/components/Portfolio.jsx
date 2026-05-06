@@ -71,7 +71,7 @@ export default function Portfolio() {
             }}>PORTFOLIO</motion.span>
             <div>
               <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', marginBottom: '1.5rem', lineHeight: 1, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Selected Works</h2>
-              <p style={{ color: 'var(--secondary)', fontSize: '1.2rem', maxWidth: '600px', fontWeight: 600 }}>A collection of high-end digital solutions focused on aesthetics and scalability.</p>
+              <p style={{ color: 'var(--secondary)', fontSize: 'clamp(1rem, 4vw, 1.2rem)', maxWidth: '600px', fontWeight: 600 }}>A collection of high-end digital solutions focused on aesthetics and scalability.</p>
             </div>
           </motion.div>
 

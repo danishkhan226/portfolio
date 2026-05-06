@@ -16,7 +16,7 @@ export default function Workflow() {
       <section id="workflow" style={{ borderTop: '4px solid var(--border)', background: 'var(--background)' }}>
         <div className="container">
           <div className="grid-2 mobile-column" style={{ alignItems: 'start' }}>
-            <div style={{ position: 'sticky', top: '150px' }}>
+            <div className="sticky-column">
               <motion.span 
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -25,7 +25,7 @@ export default function Workflow() {
                   color: 'var(--primary)', 
                   fontWeight: 900, 
                   letterSpacing: '0.1em', 
-                  fontSize: '0.9rem', 
+                  fontSize: 'clamp(0.7rem, 2vw, 0.9rem)', 
                   display: 'inline-block', 
                   marginBottom: '1.5rem',
                   border: '4px solid var(--border)',
@@ -37,8 +37,8 @@ export default function Workflow() {
               >
                 MY PROCESS
               </motion.span>
-              <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px rgba(0,0,0,0.1)' }}>How I bring ideas to life.</h2>
-              <p style={{ color: 'var(--secondary)', fontSize: '1.2rem', maxWidth: '400px', fontWeight: 600 }}>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px rgba(0,0,0,0.1)', lineHeight: 1.1 }}>How I bring ideas to life.</h2>
+              <p style={{ color: 'var(--secondary)', fontSize: 'clamp(1rem, 4vw, 1.2rem)', maxWidth: '400px', fontWeight: 600 }}>
                 A structured approach to design and development ensures that every project is delivered with precision and excellence.
               </p>
             </div>
@@ -64,7 +64,7 @@ export default function Workflow() {
                   }}
                 >
                   <span style={{ 
-                    fontSize: '3rem', 
+                    fontSize: 'clamp(2rem, 6vw, 3rem)', 
                     fontWeight: 900, 
                     color: 'var(--background)', 
                     WebkitTextStroke: '2px var(--border)',
@@ -72,8 +72,8 @@ export default function Workflow() {
                     lineHeight: 1
                   }}>{item.step}</span>
                   <div>
-                    <h3 style={{ fontSize: '2rem', marginBottom: '1rem', fontWeight: 900, textTransform: 'uppercase' }}>{item.title}</h3>
-                    <p style={{ color: 'var(--secondary)', fontSize: '1.1rem', lineHeight: 1.7, fontWeight: 600 }}>{item.desc}</p>
+                    <h3 style={{ fontSize: 'clamp(1.5rem, 5vw, 2rem)', marginBottom: '1rem', fontWeight: 900, textTransform: 'uppercase' }}>{item.title}</h3>
+                    <p style={{ color: 'var(--secondary)', fontSize: 'clamp(1rem, 3vw, 1.1rem)', lineHeight: 1.7, fontWeight: 600 }}>{item.desc}</p>
                   </div>
                 </motion.div>
               ))}

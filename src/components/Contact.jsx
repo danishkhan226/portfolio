@@ -53,7 +53,7 @@ export default function Contact() {
                 GET IN TOUCH
               </motion.span>
               <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--accent)' }}>Let&apos;s build something exceptional.</h2>
-              <p style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.2rem', marginBottom: '3rem', maxWidth: '500px' }}>
+              <p style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: 'clamp(1rem, 4vw, 1.2rem)', marginBottom: '3rem', maxWidth: '500px' }}>
                 I&apos;m currently available for freelance projects and full-time opportunities. Have a question or just want to say hi?
               </p>
               
@@ -64,7 +64,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <p style={{ color: 'var(--foreground)', fontSize: '0.9rem', fontWeight: 900, textTransform: 'uppercase' }}>Email</p>
-                    <p style={{ fontSize: '1.2rem', fontWeight: 600 }}>hello@danish.dev</p>
+                    <p style={{ fontSize: 'clamp(1rem, 4vw, 1.2rem)', fontWeight: 600 }}>hello@danish.dev</p>
                   </div>
                 </div>
                 <div style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>

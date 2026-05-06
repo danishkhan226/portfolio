@@ -75,7 +75,7 @@ export default function Testimonials() {
                   padding: 'clamp(1.5rem, 5vw, 2.5rem)'
                 }}
               >
-                <p style={{ fontStyle: 'italic', fontWeight: 800, color: 'var(--border)', fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>
+                <p style={{ fontStyle: 'italic', fontWeight: 800, color: 'var(--border)', fontSize: 'clamp(1rem, 4vw, 1.2rem)', marginBottom: '2.5rem', lineHeight: 1.6 }}>
                   &quot;{t.content}&quot;
                 </p>
                 <div style={{ display: 'flex', alignItems: 'center', gap: '1.2rem' }}>
