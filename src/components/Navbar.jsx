@@ -24,6 +24,8 @@ export default function Navbar() {
     { name: 'Contact', href: '#contact' },
   ];
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   useEffect(() => {
     const sections = ['home', 'about', 'services', 'experience', 'works', 'testimonials', 'contact'];
     
@@ -70,16 +72,18 @@ export default function Navbar() {
       style={{
         backgroundColor: 'var(--primary)',
         borderBottom: `4px solid #000`,
-        color: '#000'
+        color: '#000',
+        padding: '1rem 5vw'
       }}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: [0.16, 1, 0.3, 1], delay: 1.5 }}
     >
-      <div style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
         <a href="#home" className="logo" onClick={(e) => {
           e.preventDefault();
           document.getElementById('home')?.scrollIntoView({ behavior: 'smooth' });
+          setIsMenuOpen(false);
         }}>
           <motion.span 
             whileHover={{ scale: 1.05 }}
@@ -90,7 +94,7 @@ export default function Navbar() {
         </a>
 
         {/* Status Indicator (Desktop Only) */}
-        <div className="status-indicator" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '0.7rem', color: 'var(--secondary)', fontWeight: 500, letterSpacing: '0.05em' }}>
+        <div className="status-indicator mobile-hide" style={{ display: 'flex', alignItems: 'center', gap: '0.8rem', fontSize: '0.7rem', color: 'var(--secondary)', fontWeight: 500, letterSpacing: '0.05em' }}>
           <div style={{ position: 'relative', display: 'flex', alignItems: 'center' }}>
             <div style={{ width: '6px', height: '6px', background: '#10b981', borderRadius: '50%' }} />
             <motion.div 
@@ -105,7 +109,7 @@ export default function Navbar() {
         </div>
       </div>
       
-      <div className="nav-links">
+      <div className={`nav-links ${isMenuOpen ? 'mobile-active' : ''}`}>
         {links.map((link) => (
           <Magnetic key={link.href}>
             <a 
@@ -113,11 +117,12 @@ export default function Navbar() {
               onClick={(e) => {
                 e.preventDefault();
                 document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
+                setIsMenuOpen(false);
               }}
               className={`nav-link ${activeSection === link.href.slice(1) ? 'active' : ''}`}
             >
               {link.name}
-              {activeSection === link.href.slice(1) && (
+              {activeSection === link.href.slice(1) && !isMenuOpen && (
                 <motion.div 
                   layoutId="nav-underline"
                   style={{ 
@@ -133,18 +138,46 @@ export default function Navbar() {
             </a>
           </Magnetic>
         ))}
+        {/* Close button for mobile menu */}
+        {isMenuOpen && (
+          <button 
+            onClick={() => setIsMenuOpen(false)}
+            style={{ position: 'absolute', top: '2rem', right: '2rem', background: 'none', border: 'none', fontSize: '2.5rem', fontWeight: 900, cursor: 'pointer' }}
+          >
+            ✕
+          </button>
+        )}
       </div>
 
-      <Magnetic>
-        <a href="#contact" onClick={(e) => {
-          e.preventDefault();
-          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-        }}>
-          <button className="btn-primary" style={{ padding: '0.6rem 1.5rem', fontSize: '0.85rem', fontWeight: 700 }}>
-            Let&apos;s Talk
-          </button>
-        </a>
-      </Magnetic>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+        <Magnetic>
+          <a href="#contact" className="mobile-hide" onClick={(e) => {
+            e.preventDefault();
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          }}>
+            <button className="btn-primary" style={{ padding: '0.6rem 1.5rem', fontSize: '0.85rem', fontWeight: 700 }}>
+              Let&apos;s Talk
+            </button>
+          </a>
+        </Magnetic>
+
+        {/* Mobile Toggle */}
+        <button 
+          className="mobile-toggle"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          style={{ 
+            display: 'none', 
+            background: 'var(--background)', 
+            border: '3px solid #000', 
+            padding: '0.5rem', 
+            boxShadow: '4px 4px 0px #000',
+            cursor: 'pointer',
+            fontWeight: 900
+          }}
+        >
+          MENU
+        </button>
+      </div>
     </motion.nav>
   );
 }

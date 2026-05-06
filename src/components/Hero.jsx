@@ -36,7 +36,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.8 }}
-            style={{ maxWidth: '650px', margin: '0 auto 4rem', color: 'var(--foreground)', fontSize: '1.25rem', lineHeight: 1.6, fontWeight: 700 }}
+            style={{ maxWidth: '650px', margin: '0 auto 4rem', color: 'var(--foreground)', fontSize: 'clamp(1.1rem, 4vw, 1.25rem)', lineHeight: 1.6, fontWeight: 700 }}
           >
             I bridge the gap between imagination and reality through high-performance engineering and premium visual design.
           </motion.p>
@@ -46,17 +46,18 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1, duration: 0.8 }}
             style={{ display: 'flex', gap: '2rem', justifyContent: 'center' }}
+            className="mobile-column"
           >
             <Magnetic>
               <a href="#works">
-                <button className="btn-primary" style={{ height: '64px', padding: '0 3rem', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <button className="btn-primary" style={{ height: 'clamp(56px, 10vw, 64px)', padding: '0 clamp(1.5rem, 5vw, 3rem)', fontSize: '1.1rem', display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%', justifyContent: 'center' }}>
                   View Projects <ArrowRight size={20} />
                 </button>
               </a>
             </Magnetic>
             <Magnetic>
               <a href="#about">
-                <button className="btn-outline" style={{ height: '64px', padding: '0 3rem', fontSize: '1.1rem' }}>My Story</button>
+                <button className="btn-outline" style={{ height: 'clamp(56px, 10vw, 64px)', padding: '0 clamp(1.5rem, 5vw, 3rem)', fontSize: '1.1rem', width: '100%', justifyContent: 'center' }}>My Story</button>
               </a>
             </Magnetic>
           </motion.div>

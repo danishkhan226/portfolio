@@ -12,9 +12,9 @@ import Magnetic from './animations/Magnetic';
 export default function About() {
   return (
     <SectionTransition>
-      <section id="about" style={{ borderTop: '4px solid var(--border)' }}>
+      <section id="about" className="section-padding" style={{ borderTop: '4px solid var(--border)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.2fr', gap: '5rem', alignItems: 'center' }}>
+          <div className="grid-2 mobile-column" style={{ alignItems: 'center' }}>
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -66,7 +66,7 @@ export default function About() {
                 BIOGRAPHY
               </motion.span>
               <TextReveal>
-                <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--primary)' }}>
+                <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '3px 3px 0px var(--primary)' }}>
                   I craft digital experiences with precision.
                 </h2>
               </TextReveal>
@@ -78,18 +78,18 @@ export default function About() {
                   My approach is rooted in bold design principles and clean, maintainable code. I believe that the best products are those that feel alive and indispensable.
                 </p>
                 
-                <div style={{ marginTop: '2rem', display: 'flex', gap: '3rem' }}>
+                <div style={{ marginTop: '2rem', display: 'flex', gap: 'clamp(1.5rem, 5vw, 3rem)', flexWrap: 'wrap' }}>
                   <div>
-                    <h3 style={{ fontSize: '3rem', color: 'var(--accent)', fontWeight: 900, textShadow: '2px 2px 0px var(--border)' }}>5+</h3>
-                    <p style={{ fontSize: '0.8rem', color: 'var(--foreground)', letterSpacing: '0.1em', fontWeight: 900, textTransform: 'uppercase' }}>YEARS EXP.</p>
+                    <h3 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', color: 'var(--accent)', fontWeight: 900, textShadow: '2px 2px 0px var(--border)' }}>5+</h3>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--foreground)', letterSpacing: '0.1em', fontWeight: 900, textTransform: 'uppercase' }}>YEARS EXP.</p>
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '3rem', color: 'var(--accent)', fontWeight: 900, textShadow: '2px 2px 0px var(--border)' }}>40+</h3>
-                    <p style={{ fontSize: '0.8rem', color: 'var(--foreground)', letterSpacing: '0.1em', fontWeight: 900, textTransform: 'uppercase' }}>PROJECTS</p>
+                    <h3 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', color: 'var(--accent)', fontWeight: 900, textShadow: '2px 2px 0px var(--border)' }}>40+</h3>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--foreground)', letterSpacing: '0.1em', fontWeight: 900, textTransform: 'uppercase' }}>PROJECTS</p>
                   </div>
                   <div>
-                    <h3 style={{ fontSize: '3rem', color: 'var(--accent)', fontWeight: 900, textShadow: '2px 2px 0px var(--border)' }}>12</h3>
-                    <p style={{ fontSize: '0.8rem', color: 'var(--foreground)', letterSpacing: '0.1em', fontWeight: 900, textTransform: 'uppercase' }}>AWARDS</p>
+                    <h3 style={{ fontSize: 'clamp(2rem, 6vw, 3rem)', color: 'var(--accent)', fontWeight: 900, textShadow: '2px 2px 0px var(--border)' }}>12</h3>
+                    <p style={{ fontSize: '0.75rem', color: 'var(--foreground)', letterSpacing: '0.1em', fontWeight: 900, textTransform: 'uppercase' }}>AWARDS</p>
                   </div>
                 </div>
 

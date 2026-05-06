@@ -43,7 +43,7 @@ export default function VelocityText({ children, baseVelocity = 100 }) {
 
   return (
     <div className="parallax" style={{ overflow: 'hidden', letterSpacing: '-2px', lineHeight: 0.8, margin: 0, whiteSpace: 'nowrap', display: 'flex', flexWrap: 'nowrap' }}>
-      <motion.div className="scroller" style={{ x, fontSize: 'clamp(4rem, 10vw, 8rem)', fontWeight: 800, textTransform: 'uppercase', display: 'flex', whiteSpace: 'nowrap', flexWrap: 'nowrap', color: 'rgba(255,255,255,0.03)', gap: '4rem', willChange: 'transform' }}>
+      <motion.div className="scroller" style={{ x, fontSize: 'clamp(3rem, 10vw, 8rem)', fontWeight: 800, textTransform: 'uppercase', display: 'flex', whiteSpace: 'nowrap', flexWrap: 'nowrap', color: 'rgba(255,255,255,0.03)', gap: '4rem', willChange: 'transform' }}>
         <span>{children} </span>
         <span>{children} </span>
         <span>{children} </span>

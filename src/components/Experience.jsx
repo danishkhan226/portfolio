@@ -28,7 +28,7 @@ const experience = [
 export default function Experience() {
   return (
     <SectionTransition>
-      <section id="experience" style={{ borderTop: '4px solid var(--border)' }}>
+      <section id="experience" className="section-padding" style={{ borderTop: '4px solid var(--border)' }}>
         <div className="container">
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <div style={{ textAlign: 'center' }}>
@@ -54,7 +54,7 @@ export default function Experience() {
               </motion.span>
             </div>
             <TextReveal>
-              <h2 style={{ fontSize: '3rem', marginBottom: '4rem', textAlign: 'center', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Professional Journey</h2>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3rem)', marginBottom: 'clamp(2rem, 8vw, 4rem)', textAlign: 'center', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Professional Journey</h2>
             </TextReveal>
             
             <div style={{ position: 'relative', paddingLeft: '2rem' }}>
@@ -101,8 +101,9 @@ export default function Experience() {
                       background: 'var(--primary)', 
                       border: '3px solid var(--border)',
                       borderRadius: '50%',
-                      zIndex: 1
-                    }} />
+                      zIndex: 1,
+                      visibility: 'var(--display-mobile-timeline, visible)'
+                    }} className="timeline-dot" />
 
                     <span style={{ color: 'var(--primary)', fontSize: '1rem', fontWeight: 900, marginBottom: '0.5rem', display: 'block', textTransform: 'uppercase' }}>
                       {item.year}

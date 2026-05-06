@@ -30,7 +30,7 @@ export default function Testimonials() {
     <SectionTransition>
       <section id="testimonials" style={{ background: 'var(--background)', borderTop: '4px solid var(--border)' }}>
         <div className="container">
-          <div style={{ textAlign: 'center', marginBottom: '6rem' }}>
+          <div className="section-header" style={{ textAlign: 'center', marginBottom: 'clamp(3rem, 10vw, 6rem)' }}>
             <motion.span 
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -51,8 +51,8 @@ export default function Testimonials() {
             >
               TESTIMONIALS
             </motion.span>
-            <h2 style={{ fontSize: '4rem', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Voices of satisfaction.</h2>
-            <p style={{ color: 'var(--secondary)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', fontWeight: 600 }}>Don&apos;t just take my word for it. Here&apos;s what some of my amazing clients have to say.</p>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4rem)', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Voices of satisfaction.</h2>
+            <p style={{ color: 'var(--secondary)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', fontWeight: 600 }}>Don&apos;t just take my word for it. Here&apos;s what some of my amazing clients have to say.</p>
           </div>
 
           <div className="grid-3 mobile-column">
@@ -70,9 +70,9 @@ export default function Testimonials() {
                   justifyContent: 'space-between',
                   background: 'var(--background)',
                   border: '4px solid var(--border)',
-                  boxShadow: '8px 8px 0px var(--border)',
+                  boxShadow: 'clamp(4px, 1vw, 8px) clamp(4px, 1vw, 8px) 0px var(--border)',
                   borderRadius: '0',
-                  padding: '2.5rem'
+                  padding: 'clamp(1.5rem, 5vw, 2.5rem)'
                 }}
               >
                 <p style={{ fontStyle: 'italic', fontWeight: 800, color: 'var(--border)', fontSize: '1.2rem', marginBottom: '2.5rem', lineHeight: 1.6 }}>

@@ -26,9 +26,9 @@ const faq = [
 export default function FAQ() {
   return (
     <SectionTransition>
-      <section id="faq" style={{ borderTop: '4px solid var(--border)', background: 'var(--background)' }}>
+      <section id="faq" className="section-padding" style={{ borderTop: '4px solid var(--border)', background: 'var(--background)' }}>
         <div className="container">
-          <div className="grid-2 mobile-column" style={{ gap: '5rem' }}>
+          <div className="grid-2 mobile-column" style={{ gap: 'clamp(2rem, 10vw, 5rem)' }}>
             <div>
               <motion.span 
                 initial={{ opacity: 0 }}
@@ -50,11 +50,11 @@ export default function FAQ() {
               >
                 QUESTIONS
               </motion.span>
-              <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px rgba(0,0,0,0.1)' }}>Common Queries</h2>
-              <p style={{ color: 'var(--secondary)', fontSize: '1.2rem', fontWeight: 600 }}>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px rgba(0,0,0,0.1)' }}>Common Queries</h2>
+              <p style={{ color: 'var(--secondary)', fontSize: '1.2rem', fontWeight: 600, marginBottom: '2rem' }}>
                 Everything you need to know about working with me.
               </p>
-              <div style={{ marginTop: '3rem', display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--primary)' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', color: 'var(--primary)' }}>
                 <HelpCircle size={40} />
                 <span style={{ fontSize: '0.9rem', fontWeight: 600 }}>Still have questions? <br /> <a href="#contact" style={{ textDecoration: 'underline' }}>Get in touch.</a></span>
               </div>

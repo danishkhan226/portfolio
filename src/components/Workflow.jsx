@@ -51,11 +51,11 @@ export default function Workflow() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1, duration: 0.8 }}
-                  className="card"
+                  className="card mobile-column"
                   style={{ 
                     display: 'flex', 
-                    gap: '2rem', 
-                    padding: '3rem',
+                    gap: '1.5rem', 
+                    padding: '2rem',
                     background: 'var(--background)',
                     border: '4px solid var(--border)',
                     boxShadow: '8px 8px 0px var(--border)',

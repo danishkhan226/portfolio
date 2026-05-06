@@ -47,14 +47,14 @@ const awards = [
 export default function Portfolio() {
   return (
     <SectionTransition>
-      <section id="works" style={{ paddingTop: '10rem' }}>
+      <section id="works" className="section-padding">
         <div className="container">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            style={{ marginBottom: '6rem' }}
+            style={{ marginBottom: 'clamp(3rem, 10vw, 6rem)' }}
           >
             <motion.span style={{ 
               color: 'var(--primary)', 
@@ -70,7 +70,7 @@ export default function Portfolio() {
               textTransform: 'uppercase'
             }}>PORTFOLIO</motion.span>
             <div>
-              <h2 style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', marginBottom: '1.5rem', lineHeight: 1, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Selected Works</h2>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', marginBottom: '1.5rem', lineHeight: 1, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--primary)' }}>Selected Works</h2>
               <p style={{ color: 'var(--secondary)', fontSize: '1.2rem', maxWidth: '600px', fontWeight: 600 }}>A collection of high-end digital solutions focused on aesthetics and scalability.</p>
             </div>
           </motion.div>
@@ -84,16 +84,16 @@ export default function Portfolio() {
                   transition={{ duration: 0.8, delay: project.delay }}
                   viewport={{ once: true }}
                   className="card" 
-                  style={{ padding: 0, overflow: 'hidden', height: '500px', cursor: 'pointer' }}
+                  style={{ padding: 0, overflow: 'hidden', height: 'clamp(400px, 60vh, 500px)', cursor: 'pointer' }}
                 >
-                  <div style={{ height: '70%', position: 'relative', overflow: 'hidden' }}>
+                  <div style={{ height: '65%', position: 'relative', overflow: 'hidden' }}>
                     <ImageReveal 
                       src={project.img} 
                       alt={project.title}
                       style={{ width: '100%', height: '100%' }}
                     />
                   </div>
-                  <div style={{ padding: '2rem' }}>
+                  <div style={{ padding: 'clamp(1.5rem, 5vw, 2rem)' }}>
                     <span style={{ fontSize: '0.8rem', color: 'var(--primary)', fontWeight: 900, letterSpacing: '0.1em', display: 'block', marginBottom: '0.5rem', textTransform: 'uppercase' }}>{project.tag}</span>
                     <h4 style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 900, textTransform: 'uppercase' }}>{project.title}</h4>
                     <p style={{ color: 'var(--secondary)', fontSize: '1rem', fontWeight: 600 }}>{project.stack}</p>
@@ -103,11 +103,11 @@ export default function Portfolio() {
             ))}
           </div>
 
-          <div style={{ marginTop: '10rem', borderTop: '4px solid var(--border)', paddingTop: '6rem' }}>
-            <div className="grid-2">
+          <div style={{ marginTop: 'clamp(6rem, 15vw, 10rem)', borderTop: '4px solid var(--border)', paddingTop: 'clamp(4rem, 10vw, 6rem)' }}>
+            <div className="grid-2 mobile-column">
               <div>
-                <h3 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase' }}>Awards & Recognition</h3>
-                <p style={{ color: 'var(--secondary)', fontWeight: 600 }}>Honored to be recognized by the industry for excellence in design and technology.</p>
+                <h3 style={{ fontSize: 'clamp(2rem, 6vw, 2.5rem)', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase' }}>Awards & Recognition</h3>
+                <p style={{ color: 'var(--secondary)', fontWeight: 600, marginBottom: '2rem' }}>Honored to be recognized by the industry for excellence in design and technology.</p>
               </div>
               <div style={{ display: 'grid', gap: '4px', background: 'var(--border)', border: '4px solid var(--border)', borderRadius: '4px', overflow: 'hidden', boxShadow: '8px 8px 0px var(--border)' }}>
                 {awards.map((item, i) => (
@@ -116,7 +116,7 @@ export default function Portfolio() {
                     whileHover={{ backgroundColor: 'var(--primary)', color: 'var(--background)' }}
                     style={{ 
                       background: 'var(--background)', 
-                      padding: '2rem', 
+                      padding: 'clamp(1rem, 5vw, 2rem)', 
                       display: 'flex', 
                       justifyContent: 'space-between', 
                       alignItems: 'center',
@@ -125,7 +125,7 @@ export default function Portfolio() {
                   >
                     <div>
                       <span style={{ fontSize: '0.9rem', color: 'inherit', display: 'block', marginBottom: '0.2rem', fontWeight: 900, textTransform: 'uppercase' }}>{item.platform}</span>
-                      <span style={{ fontSize: '1.3rem', fontWeight: 900 }}>{item.award}</span>
+                      <span style={{ fontSize: '1.1rem', fontWeight: 900 }}>{item.award}</span>
                     </div>
                     <span style={{ fontVariantNumeric: 'tabular-nums', fontWeight: 900 }}>{item.year}</span>
                   </motion.div>

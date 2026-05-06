@@ -28,9 +28,9 @@ export default function Contact() {
 
   return (
     <SectionTransition>
-      <section id="contact" style={{ borderTop: '4px solid var(--border)' }}>
+      <section id="contact" className="section-padding" style={{ borderTop: '4px solid var(--border)' }}>
         <div className="container">
-          <div className="grid-2 mobile-column" style={{ gap: '5rem' }}>
+          <div className="grid-2 mobile-column" style={{ gap: 'clamp(2rem, 10vw, 5rem)' }}>
             <div>
               <motion.span 
                 initial={{ opacity: 0 }}
@@ -52,7 +52,7 @@ export default function Contact() {
               >
                 GET IN TOUCH
               </motion.span>
-              <h2 style={{ fontSize: '3.5rem', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--accent)' }}>Let&apos;s build something exceptional.</h2>
+              <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '2rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--accent)' }}>Let&apos;s build something exceptional.</h2>
               <p style={{ color: 'var(--foreground)', fontWeight: 600, fontSize: '1.2rem', marginBottom: '3rem', maxWidth: '500px' }}>
                 I&apos;m currently available for freelance projects and full-time opportunities. Have a question or just want to say hi?
               </p>
@@ -101,7 +101,7 @@ export default function Contact() {
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
+                  <div className="grid-2 mobile-column" style={{ gap: '1.5rem' }}>
                     <div className="form-group">
                       <label>Name</label>
                       <input name="name" type="text" placeholder="John Doe" required />

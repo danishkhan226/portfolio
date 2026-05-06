@@ -52,8 +52,8 @@ export default function Services() {
             >
               WHAT I OFFER
             </motion.span>
-            <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--accent)' }}>Premium Services</h2>
-            <p style={{ color: 'var(--foreground)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto', fontWeight: 600 }}>
+            <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', marginBottom: '1.5rem', fontWeight: 900, textTransform: 'uppercase', textShadow: '4px 4px 0px var(--accent)' }}>Premium Services</h2>
+            <p style={{ color: 'var(--foreground)', fontSize: '1.1rem', maxWidth: '600px', margin: '0 auto', fontWeight: 600 }}>
               I provide end-to-end solutions for businesses looking to make a significant impact in the digital space.
             </p>
           </div>
